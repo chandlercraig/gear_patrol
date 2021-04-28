@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         @user.email = params[:email]
         @user.password = params[:password]
 
-        if user.save
+        if @user.save
             redirect "/"
         else
             erb :'users/new'
