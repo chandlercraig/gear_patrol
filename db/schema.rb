@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_163045) do
+ActiveRecord::Schema.define(version: 2021_05_03_003427) do
+
+  create_table "instruments", force: :cascade do |t|
+    t.string "name"
+    t.integer "producer_id"
+    t.integer "studio_id"
+  end
+
+  create_table "producers", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "studios", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"

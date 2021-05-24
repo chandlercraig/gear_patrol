@@ -1,0 +1,7 @@
+<h1>Your Studios<h1>
+
+<ul>
+    <% @studios.each do |studio| %>
+    <li><a href="/studios/<%= studio.id %>"><%= studio.name %></a></li>
+    <% end %>
+</ul>

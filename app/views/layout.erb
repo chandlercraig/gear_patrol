@@ -13,12 +13,16 @@
 
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
+
   <body>
     <div class="wrapper">
+      <div class="container">
+        <%= "<div class='notice'>#{flash[:notice]}</div>" if flash[:notice] %>
 
       <nav>
         <% if logged_in? %>
         Logged in as: <%= current_user.email %> |
+        <a href="/studios/new">New Studio</a> |
         <a href="/logout">Logout</a>
         <% else %>
         <a href="/register">Register</a> |
