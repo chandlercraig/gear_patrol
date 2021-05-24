@@ -28,4 +28,15 @@ class StudiosController < ApplicationController
             erb :"studios/new"
         end
     end
+
+    post '/studios/:id/instruments' do
+        @studio = current_user.studios.find(params[:id])
+        @instrument = @studio.instruments.build(:name => params[:name])
+
+        if @instrument.save
+            redirect "studios/#{@studio.id}"
+        else
+            erb :"studios/show"
+        end
+    end
 end
