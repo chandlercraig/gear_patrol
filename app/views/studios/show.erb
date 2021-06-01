@@ -2,7 +2,7 @@
 
 <ol>
     <% @studio.instruments.each do |instrument| %>
-        <li><%= instrument.name %></li>
+        <li><a href="<%= "/studios/#{@studio.id}/instruments/#{instrument.id}" %>"><%= instrument.name %></a></li>
     <% end %>
 </ol>
 

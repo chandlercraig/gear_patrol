@@ -22,6 +22,7 @@
       <nav>
         <% if logged_in? %>
         Logged in as: <%= current_user.email %> |
+        <a href="/studios">Your Studios</a> |
         <a href="/studios/new">New Studio</a> |
         <a href="/logout">Logout</a>
         <% else %>
