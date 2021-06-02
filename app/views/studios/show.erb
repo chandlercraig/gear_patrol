@@ -1,12 +1,12 @@
 <h1><%= @studio.name %></h1>
 
 <ol>
-    <% @studio.instruments.each do |instrument| %>
-        <li><a href="<%= "/studios/#{@studio.id}/instruments/#{instrument.id}" %>"><%= instrument.name %></a></li>
+    <% @studios.each do |studio| %>
+        <li><a href="<%= "/producers/show" %>"><%= producer.name %></a></li>
     <% end %>
 </ol>
 
-<form action="/studios/<%= @studio.id %>/instruments" method="POST">
+<form action="/studios/<%= @studio.id %>/producers" method="POST">
     <input type="text" name="name">
-    <input type="submit" value="Add Instrument">
+    <input type="submit" value="Add Producer">
 </form>

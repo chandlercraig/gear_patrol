@@ -13,7 +13,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :"users/login"
+    if !logged_in?
+      erb :"users/login"
+    else
+      erb :"studios/new"
+    end
   end
 
   helpers do

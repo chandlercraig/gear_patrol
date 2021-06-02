@@ -1,0 +1,14 @@
+<h1>Producers with gear at <%= studio.name %><h1>
+
+<ul>
+    <% @producer.each do |producer| %>
+    <li><a href="/producers/<%= producer.id %>"><%= producer.name %></a></li>
+    <% end %>
+</ul>
+
+
+<form action="/studios/<%= @studio.id %>/producers" method="POST">
+    <input type="text" name="name">
+    <input type="submit" value="Add Producer">
+</form>
+

@@ -6,5 +6,6 @@ end
 
 use StudiosController
 use ProducersController
+use InstrumentsController
 use UsersController
 run ApplicationController
